@@ -96,7 +96,7 @@ class SpotifySdk {
     }
   }
 
-  static Future<bool> authorize({
+  static Future<dynamic> authorize({
     required String clientId,
     required String redirectUrl,
     required String tokenSwapURL,
