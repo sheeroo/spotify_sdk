@@ -122,6 +122,9 @@ class ParamNames {
   /// param name for [scope]
   static const String scope = 'scope';
 
+  /// param name for [scopes]
+  static const String scopes = 'scopes';
+
   /// param name for [playerName]
   static const String playerName = 'playerName';
 
