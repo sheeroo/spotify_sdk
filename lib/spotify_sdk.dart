@@ -107,11 +107,12 @@ class SpotifySdk {
       return await _channel.invokeMethod(MethodNames.authorize, {
         ParamNames.clientId: clientId,
         ParamNames.redirectUrl: redirectUrl,
+        ParamNames.tokenSwapURL: tokenSwapURL,
         ParamNames.tokenRefreshURL: tokenRefreshURL,
         ParamNames.scopes: scopes,
       });
     } on Exception catch (e) {
-      _logException(MethodNames.connectToSpotify, e);
+      _logException(MethodNames.authorize, e);
       rethrow;
     }
   }
