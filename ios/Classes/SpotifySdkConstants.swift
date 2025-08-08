@@ -3,6 +3,7 @@ import Foundation
 public class SpotifySdkConstants
 {
     //connecting
+    public static let methodAuthorize = "authorize"
     public static let methodConnectToSpotify = "connectToSpotify"
     public static let methodGetAccessToken = "getAccessToken"
     public static let methodDisconnectFromSpotify = "disconnectFromSpotify"
@@ -30,6 +31,8 @@ public class SpotifySdkConstants
     public static let methodGetImage = "getImage"
 
     public static let paramClientId = "clientId"
+    public static let paramTokenSwapURL = "tokenSwapURL"
+    public static let paramTokenRefreshURL = "tokenRefreshURL"
     public static let paramRedirectUrl = "redirectUrl"
     public static let paramSpotifyUri = "spotifyUri"
     public static let paramAsRadio = "asRadio"

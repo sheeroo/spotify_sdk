@@ -24,6 +24,8 @@ class MethodChannels {
 
 /// Holds the names for all methods that are used in the package
 class MethodNames {
+  static const String authorize = 'authorize';
+
   /// method name for [connectToSpotify]
   static const String connectToSpotify = 'connectToSpotify';
 
@@ -158,4 +160,8 @@ class ParamNames {
 
   /// param name for [trackIndex]
   static const String trackIndex = 'trackIndex';
+
+  static const String tokenSwapURL = 'tokenSwapURL';
+
+  static const String tokenRefreshURL = 'tokenRefreshURL';
 }

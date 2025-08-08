@@ -96,6 +96,24 @@ class SpotifySdk {
     }
   }
 
+  static Future<bool> authorize({
+    required String clientId,
+    required String redirectUrl,
+    required String tokenSwapURL,
+    required String tokenRefreshURL,
+  }) async {
+    try {
+      return await _channel.invokeMethod(MethodNames.authorize, {
+        ParamNames.clientId: clientId,
+        ParamNames.redirectUrl: redirectUrl,
+        ParamNames.tokenRefreshURL: tokenRefreshURL,
+      });
+    } on Exception catch (e) {
+      _logException(MethodNames.connectToSpotify, e);
+      rethrow;
+    }
+  }
+
   /// Returns an access token as a [String]
   ///
   /// Required parameters are the [clientId] and the [redirectUrl] to
