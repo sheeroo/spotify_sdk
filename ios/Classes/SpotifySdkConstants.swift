@@ -45,5 +45,6 @@ public class SpotifySdkConstants
     public static let paramRepeatMode = "repeatMode"
     public static let paramTrackIndex = "trackIndex"
     public static let scope = "scope"
+    public static let scopes = "scopes"
     public static let getLibraryState = "getLibraryState"
 }

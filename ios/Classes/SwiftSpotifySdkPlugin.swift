@@ -65,7 +65,7 @@ public class SwiftSpotifySdkPlugin: NSObject, FlutterPlugin, SPTSessionManagerDe
                 redirectURL: url,
                 tokenSwapURL: tokenSwapURLString,
                 tokenRefreshURL: tokenRefreshURLString,
-                scopes: swiftArguments[SpotifySdkConstants.paramScope] as? String,
+                scopes: swiftArguments[SpotifySdkConstants.scopes] as? String,
                 playURI: swiftArguments["playURI"] as? String,
                 campaign: swiftArguments["campaign"] as? String,
                 result: result
