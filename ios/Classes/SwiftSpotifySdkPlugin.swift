@@ -119,14 +119,14 @@ public class SwiftSpotifySdkPlugin: NSObject, FlutterPlugin, SPTSessionManagerDe
         self.sessionManager = SPTSessionManager(configuration: config, delegate: self)
         
         // Parse scopes (comma-separated without spaces)
-        var requestedScopes: SPTScope = []
-        if let scopesString = scopes, !scopesString.isEmpty {
-            let scopeArray = scopesString.components(separatedBy: ",")
-            requestedScopes = parseScopesFromStrings(scopeArray)
-        } else {
-            // Default scopes if none provided
-            requestedScopes = [.userReadPlaybackState, .userModifyPlaybackState, .userReadCurrentlyPlaying]
-        }
+        var requestedScopes: SPTScope = [.userTopRead]
+        // if let scopesString = scopes, !scopesString.isEmpty {
+        //     let scopeArray = scopesString.components(separatedBy: ",")
+        //     requestedScopes = parseScopesFromStrings(scopeArray)
+        // } else {
+        //     // Default scopes if none provided
+        //     requestedScopes = [.userReadPlaybackState, .userModifyPlaybackState, .userReadCurrentlyPlaying]
+        // }
         
         // Initiate authentication on main thread
         DispatchQueue.main.async { [weak self] in
